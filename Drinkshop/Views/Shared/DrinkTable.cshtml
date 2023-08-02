@@ -1,0 +1,13 @@
+﻿@model Drink
+<div class="col-sm-4 col-lg-4 col-md-4">
+    <div class="card mb-3">
+        <img src="@Model.ImageThumbnailUrl" class="card-img-top" alt="">
+        <div class="card-body">
+            <h3 class="card-title">@Model.Name</h3>
+            <p class="card-text">@Model.ShortDescription</p>
+            <h4 class="card-price">@Model.Price.ToString("c")</h4>
+        </div>
+        <a asp-action="AddToShoppingCart" asp-controller="ShoppingCart" asp-route-drinkId="@Model.DrinkId">Add To Cart</a>
+
+    </div>
+</div>
